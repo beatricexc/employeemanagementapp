@@ -1,38 +1,49 @@
 using EmployeeManagement.Data;
 using EmployeeManagement.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace EmployeeManagement.Repositories;
 
-public class EmployeeRespository:IEmployeeRepository
+public class EmployeeRepository:IEmployeeRepository
 {
     private readonly AppDbContext _context;
     
-    public EmployeeRespository(AppDbContext context)
+    public EmployeeRepository(AppDbContext context)
     {
+        _context = context;
+    }
+    public async Task<IEnumerable<Employee>> GetAllEmployeesAsync()
+    {
+        return await _context.Employees.ToListAsync();
+    }
+
+    public async Task<Employee?> GetEmployeeByIdAsync(int id)
+    {
+        return await _context.Employees.FindAsync(id);
+    }
+
+    public async Task AddEmployeeAsync(Employee employee)
+    {
+      await _context.Employees.AddAsync(employee);
+      await _context.SaveChangesAsync();
+    }
+
+    public async Task UpdateEmployeeAsync(Employee employee)
+    {
+         _context.Employees.Update(employee);
+         await _context.SaveChangesAsync();
+    }
+
+    public async Task DeleteEmployeeAsync(int id)
+    {
+        var employeeInDb = await _context.Employees.FindAsync(id);
         
-    }
-    public Task<IEnumerable<Employee>> GetAllEmployeesAsync()
-    {
-        throw new NotImplementedException();
-    }
-
-    public Task<Employee> GetEmployeeByIdAsync(int id)
-    {
-        throw new NotImplementedException();
-    }
-
-    public Task AddEmployeeAsync(Employee employee)
-    {
-        throw new NotImplementedException();
-    }
-
-    public Task UpdateEmployeeAsync(Employee employee)
-    {
-        throw new NotImplementedException();
-    }
-
-    public Task DeleteEmployeeAsync(int id)
-    {
-        throw new NotImplementedException();
+        if (employeeInDb == null)
+        {
+            throw new KeyNotFoundException($"Employee with id {id} was not found");
+        }
+        
+        _context.Employees.Remove(employeeInDb);
+        await _context.SaveChangesAsync();
     }
 }

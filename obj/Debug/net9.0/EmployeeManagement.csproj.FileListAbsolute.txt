@@ -39,3 +39,9 @@
 /Users/celinabenedic/RiderProjects/EmployeeManagement/EmployeeManagement/bin/Debug/net9.0/Microsoft.Extensions.Primitives.dll
 /Users/celinabenedic/RiderProjects/EmployeeManagement/EmployeeManagement/obj/Debug/net9.0/EmployeeManagement.csproj.AssemblyReference.cache
 /Users/celinabenedic/RiderProjects/EmployeeManagement/EmployeeManagement/obj/Debug/net9.0/Employee.61744648.Up2Date
+/Users/celinabenedic/RiderProjects/EmployeeManagement/EmployeeManagement/bin/Debug/net9.0/Microsoft.OpenApi.dll
+/Users/celinabenedic/RiderProjects/EmployeeManagement/EmployeeManagement/bin/Debug/net9.0/Swashbuckle.AspNetCore.Swagger.dll
+/Users/celinabenedic/RiderProjects/EmployeeManagement/EmployeeManagement/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/Users/celinabenedic/RiderProjects/EmployeeManagement/EmployeeManagement/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/Users/celinabenedic/RiderProjects/EmployeeManagement/EmployeeManagement/obj/Debug/net9.0/EmployeeManagement.MvcApplicationPartsAssemblyInfo.cs
+/Users/celinabenedic/RiderProjects/EmployeeManagement/EmployeeManagement/obj/Debug/net9.0/EmployeeManagement.sourcelink.json
