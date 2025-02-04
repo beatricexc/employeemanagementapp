@@ -23,5 +23,9 @@ export class EmployeeTableComponent {
       console.log(data);
     });
   }
+
+  deleteEmployee(id:number) : void {
+    
+  }
   
 }
