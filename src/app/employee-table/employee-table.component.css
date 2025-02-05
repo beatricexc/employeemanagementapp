@@ -1,0 +1,8 @@
+.image-banner {
+    background-image: url('/Employees_.png');
+    background-size: cover; 
+    background-position: bottom;
+    background-repeat: no-repeat;
+    height:300px;
+    width: 100%;
+}

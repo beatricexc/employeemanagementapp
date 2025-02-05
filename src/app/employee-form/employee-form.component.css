@@ -1,0 +1,12 @@
+.bg-image {
+    position: absolute;
+    top: 50%; /* Center the image */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;  /* The element takes 80% of the parent container's width */
+    max-width: 1000px; /* Adjust the size */
+    height: auto;
+    opacity: 0.8; 
+    z-index: -1; /* Push it behind everything */
+  }
+  

@@ -1,26 +1,35 @@
-<h2>Employees</h2>
-<table>
-    <thead>
-        <tr>
-            <th>Id</th>
-            <th>FirstName</th>
-            <th>LastName</th>
-            <th>Email</th>
-            <th>Phone</th>
-            <th>Position</th>
-            <th>Actions</th>
-
-        
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let employee of employees">
-            <td>{{employee.id}}</td>
-            <td>{{employee.firstName}}</td>
-            <td>{{employee.lastName}}</td>
-            <td>{{employee.email}}</td>
-            <td>{{employee.phone}}</td>
-            <td>{{employee.position}}</td>
-            <td><button (click)="deleteEmployee(employee.id)">Delete</button></td>
-    </tbody>
-</table>
+<h2 class="text-center py-5">Employees</h2>
+    <div class="card">
+        <div class="card-header image-banner">  
+    </div>
+    <div class="card-body">
+        <p class="fs-5">Overview</p>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>FirstName</th>
+                    <th>LastName</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Position</th>
+                    <th>Actions</th> 
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let employee of employees">
+                    <td>{{employee.id}}</td>
+                    <td>{{employee.firstName}}</td>
+                    <td>{{employee.lastName}}</td>
+                    <td>{{employee.email}}</td>
+                    <td>{{employee.phone}}</td>
+                    <td>{{employee.position}}</td>
+                    <td>
+                        <button class="btn btn-primary m-2 btn-sm" (click)="editEmployee(employee.id)">Edit</button>
+                        <button class="btn btn-danger btn-sm" (click)="deleteEmployee(employee.id)">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
