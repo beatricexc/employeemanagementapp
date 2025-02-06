@@ -3,21 +3,22 @@ using System.ComponentModel.DataAnnotations;
 
 public class Employee
 {
-    [Required]
     public int Id { get; set; }
-    
-    [Required]
+
+    [Required(ErrorMessage = "First Name is required")]
     public string FirstName { get; set; }
-    
-    [Required]
+
+    [Required(ErrorMessage = "Last Name is required")]
     public string LastName { get; set; }
-    
-    [Required]
+
+    [Required(ErrorMessage = "Email is required")]
+    [EmailAddress(ErrorMessage = "Invalid Email Address")]
     public string Email { get; set; }
-    
-    [Required]
+
+    [Required(ErrorMessage = "Phone number is required")]
     public string Phone { get; set; }
-    
-    [Required]
+
+    [Required(ErrorMessage = "Address is required")]
     public string Position { get; set; }
+
 }
