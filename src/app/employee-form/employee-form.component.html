@@ -11,8 +11,10 @@
 
 <div class="mb-3">
     <label class="form-label">FirstName</label>
-    <input class="form-control"type="text" name="firstName" [(ngModel)]="employee.firstName"/>
+    <input required #firstName="ngModel" class="form-control"type="text" name="firstName" [(ngModel)]="employee.firstName"/>
+    <div class="text-danger">First Name is required</div>
 </div>
+
 <div class="mb-3">
     <label class="form-label">LastName</label>
     <input class= "form-control" type="text" name="lastName" [(ngModel)]="employee.lastName"/>
